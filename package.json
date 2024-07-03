@@ -1,0 +1,23 @@
+{
+  "name": "em-tippspiel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server\\app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/app.js"
+  },
+  "author": "Jakob Steinhauser",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "connect-sqlite3": "^0.9.15",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "md5": "^2.3.0",
+    "nodemon": "^3.1.2",
+    "sqlite3": "^5.1.7"
+  }
+}

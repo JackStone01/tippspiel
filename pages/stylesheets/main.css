@@ -1,0 +1,405 @@
+.games{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#headline{
+    width: 100%;
+}
+
+.biggerheader{
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    width: 100%;
+    border: black;
+    border-width: 10px;
+    border-color: black;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.logo{
+    background-color: transparent;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    margin-right: 20px;
+}
+
+.smallerheader{
+    position: fixed;
+    display: flex;
+    background-color: white;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 4;
+}
+
+.headerbutton{
+    background-color: transparent;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    margin-right: 20px;
+}
+
+.headerbutton:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.stackmenu{
+    height: 100%;
+    width: 50px;
+    border: 1px;
+    background-color: transparent;
+    border-color: black;
+    border-style: solid;
+}
+
+.stackmenu:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.emlogo{
+    height: 50px;
+}
+
+#st1{
+    display: flex;
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gamedayoverview{
+    margin: 20px;
+
+}
+
+#gameday{
+    margin: 20px;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    height: 50px;
+    font-size: larger;
+    font-weight: 600;
+    flex-wrap: wrap;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-color: black;
+    border-style: solid;
+    border-width: 5px;
+    border: 5px;
+    box-shadow: gray;
+    border-radius: 5px;
+}
+
+.teams{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.teamlogos{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-top: 10px;
+}
+
+.gameinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+.gameinfo-container {
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: black;
+    margin: 15px;
+    width: 300px;
+
+}
+
+.testdiv{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border-radius: 100%;
+}
+
+.gamebutton{
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: black;
+    margin: 15px;
+    width: 300px;
+}
+
+.gamebutton:hover{
+    cursor: pointer;
+}
+
+.firstdate, .seconddate, .thirddate, .fourthdate{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gamedays{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.daydescribe{
+    margin-top: 50px;
+}
+
+#login{
+    margin-left: 50px;
+}
+
+#logout{
+    display: none;
+    margin-left: 50px;
+}
+
+#login_sidebar{
+    margin-top: 50px;
+}
+
+#logout_sidebar{
+    margin-top: 50px;
+    display: none;
+}
+
+#sidebar{
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    width: auto;
+    position: fixed;
+    z-index: 1;
+    top: 60px;
+    left: 0;
+    background-color: lightgray;
+    overflow-x: hidden;
+    transition: 0.5s;
+    overflow-y: hidden;
+    z-index: 4;
+}
+
+#closesidebar{
+    display: none;
+}
+
+.buttonsidebar{
+    background-color: lightgray;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+}
+
+.buttonsidebar:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+
+.popup 
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+  }
+
+.popup-content 
+{
+    display: flex;
+    position: absolute;
+    background-color: white;
+    border-color: black;
+    padding: 40px;
+    border-radius: 5px;
+    margin: 20px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    max-height: 80%;
+    max-width: 90%;
+    overflow-y: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#guessingcontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#teams{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.close 
+{
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  color: red;
+}
+
+.popupteamlogos{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin: 10px;
+    margin-top: 15px;
+}
+
+#guesses{
+    display: flex;
+    flex-direction: row;
+}
+
+#guessteam1, #guessteam2{
+    height: 30px;
+    margin-top: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.saveguess{
+    height: 40px;
+    width: 150px;
+    background-color: orange;
+    border: none;
+    margin-top: 20px;
+}
+
+.saveguess:hover{
+    cursor: pointer;
+}
+
+/*Darstellung Hamburgermenu*/
+.hamburger-icon-container {
+    color:lightgray;
+    height: 1.7em;
+    width: 1.7em;
+    position: relative;
+    cursor: pointer;
+    background: currentColor;
+    border:10px solid currentColor;
+    border-radius: 3px;
+  }
+  
+  .hamburger-icon,
+  .hamburger-icon:before,
+  .hamburger-icon:after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 1.7em;
+    background: white;
+    transition: all .2s ease;
+  }
+  
+  .hamburger-icon {
+    top: 0.75em
+  }
+  
+  .hamburger-icon:before {
+    top: -0.55em
+  }
+  
+  .hamburger-icon:after {
+    top: 0.55em
+  }
+
+
+  /*Darstellung für Close Icon*/
+  .hamburger-active .hamburger-icon-container {
+    color:lightgray;
+  }
+  
+  .hamburger-active .hamburger-icon {
+    background: transparent;
+    transform: rotate(-135deg)
+  }
+  
+  .hamburger-active .hamburger-icon:before,
+  .hamburger-active .hamburger-icon:after {
+    top: 0
+  }
+  
+  .hamburger-active .hamburger-icon:before {
+    transform: rotate(90deg)
+  }
+
+
+
+
+
+/*Ansicht Navbar oben oder ausfahrbare Navbar seitlich bei 920px Bildschirmbreite*/
+@media screen and (max-width: 920px) {
+    .biggerheader{
+        display: none;
+    }    
+}
+
+@media screen and (min-width: 921px) {
+    .smallerheader{
+        display: none;
+    }
+}
+

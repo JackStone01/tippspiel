@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisherige Ergebnisse</title>
+    <link rel="stylesheet" href="pages/stylesheets/main.css">
+    <link rel="stylesheet" href="pages/stylesheets/points.css">
+</head>
+<body onload="HeaderandScoresCall()">
+    <header id="headline"></header>
+    <div class="inside-body">
+        <!--Das Podium visuell dargestellt-->
+        <div id="podium" class="podium">
+            <div id="p3" class="steps">
+                <h3 id="name_of_p3">3. Platz</h3>
+                <div class="podiumstep3">
+                    <h3 id="points_of_p3">0 Punkte</h3>
+                    <h3 id="PriceThirdPlace"></h3>
+                </div>
+            </div>
+            <div id="p1" class="steps">
+                <h3 id="name_of_p1">1. Platz</h3>
+                <div class="podiumstep1">
+                    <h3 id="points_of_p1">0 Punkte</h3>
+                    <h3 id="PriceFirstPlace"></h3>
+                </div>
+            </div>
+            <div id="p2" class="steps">
+                <h3 id="name_of_p2">2. Platz</h3>
+                <div class="podiumstep2">
+                    <h3 id="points_of_p2">0 Punkte</h3>
+                    <h3 id="PriceSecondPlace"></h3>
+                </div>
+            </div>
+        </div>
+
+        <!--Das Podium als Liste gestellt, falls die Träppchen zu groß werden-->
+        <div id="mobilepodium">
+            <div class="lowranklist p1">
+                <p>Platz 1</p>
+                <p id="PriceFirstPlaceMobile"></p>
+                <p id="pointsp1">0 Punkte</p>
+            </div>
+            <div class="lowranklist p2">
+                <p>Platz 2</p>
+                <p id="PriceSecondPlaceMobile"></p>
+                <p id="pointsp2">0 Punkte</p>
+            </div>
+            <div class="lowranklist p3">
+                <p>Platz 3</p>
+                <p id="PriceThirdPlaceMobile"></p>
+                <p id="pointsp3">0 Punkte</p>
+            </div>
+        </div>
+
+        <div class="lowranklist">
+            <p>Platz 4</p>
+            <p class="PriceFourthPlace"></p>
+            <p id="pointsp4">0 Punkte</p>
+        </div>
+        <div class="lowranklist">
+            <p>Platz 5</p>
+            <p class="PriceFourthPlace"></p>
+            <p id="pointsp5">0 Punkte</p>
+        </div>
+        <div class="lowranklist">
+            <p>Platz 6</p>
+            <p class="PriceFourthPlace"></p>
+            <p id="pointsp6">0 Punkte</p>
+        </div>
+        <div class="lowranklist">
+            <p>Platz 7</p>
+            <p class="PriceFourthPlace"></p>
+            <p id="pointsp7">0 Punkte</p>
+        </div>
+        <div class="lowranklist">
+            <p>Platz 8</p>
+            <p class="PriceFourthPlace"></p>
+            <p id="pointsp8">0 Punkte</p>
+        </div>
+        <div class="lowranklist">
+            <p>Platz 9</p>
+            <p class="PriceFourthPlace"></p>
+            <p id="pointsp9">0 Punkte</p>
+        </div>
+        <div class="lowranklist">
+            <p>Platz 10</p>
+            <p class="PriceFourthPlace"></p>
+            <p id="pointsp10">0 Punkte</p>
+        </div>
+        <div id="own-standing">
+            <div class="lowranklist">
+                <p>Eigene Platzierung</p>
+                <p id="ownplacement">0. Platz</p>
+                <p id="ownpoints">0 Punkte</p>
+            </div>
+        </div>
+    </div>
+    <script src="pages/scripts/user_management.js"></script>
+    <script src="pages/scripts/create_games.js"></script>
+    <script src="pages/scripts/bib.js"></script>
+</body>
+</html>

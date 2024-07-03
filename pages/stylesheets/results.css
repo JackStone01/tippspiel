@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tipHistoryContainer {
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.single-tip {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+}
+
+.left-column, .middle-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-column {
+    flex: 2;
+    align-items: center;
+}
+
+.team-details {
+    display: flex;
+    align-items: center;
+}
+
+.team-logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.team-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.middle-column {
+    flex: 3;
+    align-items: center;
+    text-align: center;
+}
+
+.result-info, .tipp-info {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.right-column {
+    flex: 1;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.points {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.points-green {
+    color: green;
+}
+
+.points-light-green {
+    color: lightgreen;
+}
+
+.points-red {
+    color: red;
+}
+
+.points-open {
+    color: #ff9800;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+}
+
+.header nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.header nav a:hover {
+    color: #ff9800;
+}
+
+@media screen and (max-width: 900px) {
+    .header nav {
+        display: none;
+    }
+
+    .header .menu-toggle {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    .header .menu-toggle {
+        display: none;
+    }
+}

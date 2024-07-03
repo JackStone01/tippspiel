@@ -1,0 +1,218 @@
+body{
+    max-width: 90%;
+}
+
+.management-content
+{
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 30px;    
+}
+
+#user-management
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 100%;
+    margin: 30px;
+    margin-top: 80px;
+    margin-right: 60px;
+}
+
+#price-management
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 100%;
+    margin: 60px;
+}
+
+.Userheader
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+#add-user
+{
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    margin-left: 50px;
+    width: 170px;
+    height: 40px;
+}
+
+#add-user:hover
+{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#userlist
+{
+    margin-top: 30px;
+    width: 100%;
+}
+
+.headline-useroverview
+{
+    background-color: lightgray;
+}
+
+.single-user
+{
+    border: none;
+    border-top: 2px black solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.editbuttons
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.UserButton
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+.edit
+{
+    background-color: orange;
+}
+
+.delete
+{
+    background-color: red;
+}
+
+.UserButton:hover
+{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#pricelist
+{
+    margin-top: 30px;
+}
+
+.priceManagementFirst
+{
+    background-color: gold;
+}
+
+.priceManagementSecond
+{
+    background-color: silver;
+}
+
+.priceManagementThird
+{
+    background-color: #CD7F32;
+}
+
+.priceManagementFourth
+{
+    background-color: chocolate;
+}
+
+#PriceFirstPlace, #PriceSecondPlace, #PriceThirdPlace, #PriceFourthPlace
+{
+    margin-left: 200px;
+}
+
+
+
+
+
+#add-user-form
+{
+    display: flex;
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+    max-height: 80%;
+    align-items: center;
+    flex-direction: column;
+}
+
+#popup
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+
+input
+{
+    width: 300px;
+    height: 30px;
+    font-size: larger;
+}
+
+.roleSelect
+{
+    width: 310px;
+    height: 35px;
+    font-size: larger;
+}
+
+.cancelbutton
+{
+    border: none;
+    border-radius: 5px;
+    width: 170px;
+    height: 50px;
+    margin-top: 40px;
+    background-color: red;
+    margin-right: 20px;
+}
+
+.cancelbutton:hover
+{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.formbuttons
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

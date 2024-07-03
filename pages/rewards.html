@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gewinne</title>
+    <link rel="stylesheet" href="pages/stylesheets/main.css">
+    <link rel="stylesheet" href="pages/stylesheets/management.css">
+    <link rel="stylesheet" href="pages/stylesheets/login.css">
+    <style>
+        /* Gemeinsame Stile für Preis-Container */
+        .price-container {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        /* Stile für Platz */
+        .place {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333; /* Dunkle Textfarbe */
+            margin-bottom: 5px;
+        }
+
+        /* Stile für Beschreibung */
+        .description {
+            font-size: 1em;
+            color: #666; /* Hellere Textfarbe */
+        }
+    </style>
+</head>
+<body onload="HeaderandPreisecall()">
+    <header id="headline"></header>
+    <div id="price-management">
+        <div class="Userheader">
+            <h2>Preise</h2>
+        </div>
+       <div id="pricelist">
+                <div class="single-user priceManagementFirst">
+                    <h3>Platz 1</h3>
+                    <h3 id="PriceFirstPlace">Preis eintragen!r</h3>
+
+                </div>
+                <div class="single-user priceManagementSecond">
+                    <h3>Platz 2</h3>
+                    <h3 id="PriceSecondPlace">Preis eintragen!</h3>
+
+                </div>
+                <div class="single-user priceManagementThird">
+                    <h3>Platz 3</h3>
+                    <h3 id="PriceThirdPlace">Preis eintragen!</h3>
+
+                </div>
+                <div class="single-user priceManagementFourth">
+                    <h3>Platz 4-10</h3>
+                    <h3 id="PriceFourthPlace">Preis eintragen!</h3>
+
+                </div>
+            </div>
+    </div>
+    <script src="pages/scripts/create_games.js"></script>
+    <script src="pages/scripts/bib.js"></script>
+    <script src="pages/scripts/user_management.js"></script>
+</body>
+</html>

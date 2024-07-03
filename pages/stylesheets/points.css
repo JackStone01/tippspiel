@@ -1,0 +1,115 @@
+.podium{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 30px;
+}
+
+#p1, #p2, #p3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    width: 300px;
+}
+
+.podiumstep1, .podiumstep2, .podiumstep3{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 260px;
+    align-self: baseline;
+    padding: 20px;
+    border-radius: 15px 15px 0px 0px;
+    /*margin-left: 20px;*/
+    margin-right: 20px;
+}
+
+.podiumstep1{
+    background-color: gold;
+    height: 200px;
+}
+
+.podiumstep2{
+    background-color: silver;
+    height: 150px;
+}
+
+.podiumstep3{
+    background-color: #CD7F32;
+    height: 100px;
+}
+
+.podiumstep1, .podiumstep2, .podiumstep3
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lowranklist{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 2px black solid;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.p1{
+    border: none;
+    margin-top: 20px;
+    background-color: gold;
+}
+
+.p2{
+    background-color: silver;
+}
+
+.p3{
+    background-color: #CD7F32;
+}
+
+#mobilepodium
+{
+    display: none;
+    
+}
+
+.inside-body
+{
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+
+@media screen and (max-width: 1050px){
+    .podium
+    {
+        display: none;
+    }
+
+    #mobilepodium
+    {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1051px)
+{
+    .podium
+    {
+        display: flex;
+    }
+
+    #mobilepodium
+    {
+        display: none;
+    }
+}

@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color: black;
+}
+
+.input{
+    margin-top: 20px;
+    border: 5px;
+    border-color: black;
+    border-radius: 5px;
+    box-shadow: black;
+}
+
+#usr, #pwd{
+    width: 300px;
+    height: 30px;
+    font-size: larger;
+}
+
+.loginbutton{
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    width: 170px;
+    height: 50px;
+    margin-top: 40px;
+}
+
+.loginbutton:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logindiv{
+    display: flex;
+    justify-content: center;
+}

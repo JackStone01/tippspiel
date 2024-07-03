@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EM Tippspiel</title>
+    <link rel="stylesheet" href="pages/stylesheets/main.css">
+</head>
+<body onload="createGames()">
+    <header id="headline"></header>
+    <h1></h1>
+    <h2></h2>
+    <select name="gameday" id="gameday" onchange="selectGamedays()">
+        <option value="day1">Gruppenphase Spieltag 1</option>
+        <option value="day2">Gruppenphase Spieltag 2</option>
+        <option value="day3">Gruppenphase Spieltag 3</option>
+        <option value="day4">Achtelfinale</option>
+        <option value="day5">Viertelfinale</option>
+        <option value="day6">Halbfinale</option>
+        <option value="day7">Finale</option>
+    </select>
+    <div class="gamedayoverview">
+        <div id="st1" class="games">
+            <div id="dayone" class="gamedays">
+                <div id="dayonefirstdate" class="firstdate">
+                    <h3 class="daydescribe">Freitag, 14.06.</h3>
+                </div>
+                <div id="dayoneseconddate" class="seconddate">
+                    <h3 class="daydescribe">Samstag, 15.06.</h3>
+                </div>
+                <div id="dayonethirddate" class="thirddate">
+                    <h3 class="daydescribe">Sonntag, 16.06.</h3>
+                </div>
+                <div id="dayonefourthdate" class="fourthdate">
+                    <h3 class="daydescribe">Montag, 17.06.</h3>
+                </div>
+                <div id="dayonefifthdate" class="fourthdate">
+                    <h3 class="daydescribe">Dienstag, 18.06.</h3>
+                </div>
+            </div>
+        </div>
+        <div id="st2" class="games">
+            <div id="daytwo" class="gamedays">
+                <div id="daytwofirstdate" class="firstdate">
+                    <h3 class="daydescribe">Mittwoch, 19.06.</h3>
+                </div>
+                <div id="daytwoseconddate" class="seconddate">
+                    <h3 class="daydescribe">Donnerstag, 20.06.</h3>
+                </div>
+                <div id="daytwothirddate" class="thirddate">
+                    <h3 class="daydescribe">Freitag, 21.06.</h3>
+                </div>
+                <div id="daytwofourthdate" class="fourthdate">
+                    <h3 class="daydescribe">Samstag, 22.06.</h3>
+                </div>
+            </div>
+        </div>
+        <div id="st3" class="games">
+            <div id="daythree" class="gamedays">
+                <div id="daythreefirstdate" class="firstdate">
+                    <h3 class="daydescribe">Sonntag, 23.06.</h3>
+                </div>
+                <div id="daythreeseconddate" class="seconddate">
+                    <h3 class="daydescribe">Montag, 24.06.</h3>
+                </div>
+                <div id="daythreethirddate" class="thirddate">
+                    <h3 class="daydescribe">Dienstag, 25.06.</h3>
+                </div>
+                <div id="daythreefourthdate" class="fourthdate">
+                    <h3 class="daydescribe">Mittwoch, 26.06.</h3>
+                </div>
+            </div>
+        </div>
+        <div id="st4" class="games">
+            <div id="dayfour" class="gamedays">
+                <div id="dayfourfirstdate" class="firstdate">
+                    <h3 class="daydescribe">Samstag, 29.06.</h3>
+                </div>
+                <div id="dayfourseconddate" class="seconddate">
+                    <h3 class="daydescribe">Sonntag, 30.06.</h3>
+                </div>
+                <div id="dayfourthirddate" class="thirddate">
+                    <h3 class="daydescribe">Montag, 01.07.</h3>
+                </div>
+                <div id="dayfourfourthdate" class="fourthdate">
+                    <h3 class="daydescribe">Dienstag, 02.07.</h3>
+                </div>
+            </div>
+        </div>
+        <div id="st5" class="games">
+            <div id="dayfive" class="gamedays">
+                <div id="dayfivefirstdate" class="firstdate">
+                    <h3 class="daydescribe">Freitag, 05.07.</h3>
+                </div>
+                <div id="dayfiveseconddate" class="seconddate">
+                    <h3 class="daydescribe">Samstag, 06.07.</h3>
+                </div>
+            </div>
+        </div>
+        <div id="st6" class="games">
+            <div id="daysix" class="gamedays">
+                <div id="daysixfirstdate" class="firstdate">
+                    <h3 class="daydescribe">Dienstag, 09.07.</h3>
+                </div>
+                <div id="daysixseconddate" class="seconddate">
+                    <h3 class="daydescribe">Mittwoch, 10.07.</h3>
+                </div>
+            </div>
+        </div>
+        <div id="st7" class="games">
+            <div id="dayseven" class="gamedays">
+                <div id="daysevenfirstdate" class="firstdate">
+                    <h3 class="daydescribe">Sonntag, 14.07.</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Tippfenster, das je nach Spiel durch die Funktion createGuessWindow angepasst wird-->
+    <div class="popup" id="guessingwindow" style="display: none;">
+        <div class="popup-content fewer">
+            <b><span class="close" onclick="closePopup()">&times;</span></b>
+            <div id="guessingcontent">
+                <div id="teams">
+                    <img class="popupteamlogos" id="flag1" alt="country flag 1">
+                    <h3 id="team1">Country 1</h3>
+                    <h3>&nbsp;-&nbsp;</h3>
+                    <h3 id="team2">Country 2</h3>
+                    <img class="popupteamlogos" id="flag2" alt="country flag 2">
+                </div>
+                <div id="guesses">
+                    <input id="guessteam1" type="text">
+                    <h3>:</h3>
+                    <input id="guessteam2" type="text">
+                </div>
+                <button class="saveguess" onclick="fetchGameIdAndSaveGuess()"><b>Speichern</b></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="pages/scripts/bib.js"></script>
+    <script src="pages/scripts/create_games.js"></script>
+</body>
+</html>

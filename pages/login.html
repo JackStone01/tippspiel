@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="pages/stylesheets/login.css">
+    
+</head>
+<body>
+    <!--Einfache HTML Seite zur Anmeldung-->
+    <h1>
+        Anmeldung
+    </h1>
+    <div class="input">
+        <h3>Benutzername</h3>
+        <input id="usr" type="text"><br><br>
+        <h3>Passwort</h3>
+        <input id="pwd" type="password"><br><br>
+        <div class="logindiv">
+            <button class="loginbutton" onclick="login()"><h3>Anmelden</h3></button>
+        </div>
+    </div>
+    <!--Bib wird zweimal eingefügt, sodass Server und HTML selber zugriff auf Funktionen hat (Wichtig für eventListener)-->
+    <script src="pages/scripts/bib.js"></script>
+    <script src="API/API_Functions.js"></script>
+    <!--Kann über include nicht aufgerufen werden-->
+    <script>
+        document.getElementById("pwd").addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                login()
+            }
+        });
+        document.getElementById("usr").addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+            login();
+            }
+        });
+    </script>
+</body>
+</html>

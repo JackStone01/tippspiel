@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verwaltung</title>
+    <link rel="stylesheet" href="pages/stylesheets/main.css">
+    <link rel="stylesheet" href="pages/stylesheets/management.css">
+    <link rel="stylesheet" href="pages/stylesheets/login.css">
+       <style>
+        .edit-icon {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .single-user {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .priceManagementFirst, .priceManagementSecond, .priceManagementThird, .priceManagementFourth {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body onload="HeaderandLoadUsercall()">
+    <header id="headline"></header>
+
+    <div class="management-content">
+        <div id="user-management">
+            <div class="Userheader">
+                <h2>Benutzerübersicht</h2>
+                <button id="add-user" onclick="new_user()"><b>Neuer Benutzer</b></button>
+            </div>
+            <div id="userlist">
+                <div class="single-user headline-useroverview">
+                    <h3>Benutzername</h3>
+                    <h3>Rolle</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="price-management">
+            <div class="Userheader">
+                <h2>Preise</h2>
+            </div>
+            <div id="pricelist">
+                <div class="single-user priceManagementFirst">
+                    <h3>Platz 1</h3>
+                    <h3 id="PriceFirstPlace">Preis eintragen!r</h3>
+                    <img src="pages/img/pen-solid.svg" alt="Edit Icon" class="edit-icon" onclick="editPrice(1)">
+                </div>
+                <div class="single-user priceManagementSecond">
+                    <h3>Platz 2</h3>
+                    <h3 id="PriceSecondPlace">Preis eintragen!</h3>
+                    <img src="pages/img/pen-solid.svg" alt="Edit Icon" class="edit-icon" onclick="editPrice(2)">
+                </div>
+                <div class="single-user priceManagementThird">
+                    <h3>Platz 3</h3>
+                    <h3 id="PriceThirdPlace">Preis eintragen!</h3>
+                    <img src="pages/img/pen-solid.svg" alt="Edit Icon" class="edit-icon" onclick="editPrice(3)">
+                </div>
+                <div class="single-user priceManagementFourth">
+                    <h3>Platz 4-10</h3>
+                    <h3 id="PriceFourthPlace">Preis eintragen!</h3>
+                    <img src="pages/img/pen-solid.svg" alt="Edit Icon" class="edit-icon" onclick="editPrice(4)">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Fenster, um neuen Benutzer anzulegen -->
+    <div id="popup">
+        <div id="add-user-form">
+            <h1>Neuen Benutzer anlegen</h1>
+            <h3>Benutzername</h3>
+            <div>
+                <input id="username" type="text">
+            </div>
+            <h3>Rolle</h3>
+            <div>
+                <select class="roleSelect" name="role" id="role">
+                    <option value="admin">Administrator</option>
+                    <option value="guesser">Spieler</option>
+                </select>
+            </div>
+            <h3>Passwort</h3>
+            <div>
+                <input id="password" type="password">
+            </div>
+            <h3>Passwort bestätigen</h3>
+            <div>
+                <input id="password-confirm" type="password">
+            </div><br>
+            <div class="formbuttons" id="formbuttons">
+                <button class="cancelbutton" onclick="closepopup()"><h3>Abbrechen</h3></button>
+                <button class="loginbutton" id="submit-new-user" onclick="add_user()"><h3>Benutzer anlegen</h3></button>
+            </div>
+        </div>
+    </div>
+
+<!-- Popup Fenster, um Preis zu bearbeiten -->
+<div id="price-popup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePricePopup()">&times;</span>
+        <h2>Preis bearbeiten</h2>
+        <h3>Platz <span id="price-place"></span></h3>
+        <div>
+            <input id="price-input" type="text" placeholder="Neuen Preis eingeben...">
+        </div><br>
+        <div class="formbuttons">
+            <button class="cancelbutton" onclick="closePricePopup()"><h3>Abbrechen</h3></button>
+            <button class="loginbutton" onclick="savePrice()"><h3>Speichern</h3></button>
+        </div>
+    </div>
+</div>
+
+
+    <script src="pages/scripts/create_games.js"></script>
+    <script src="pages/scripts/bib.js"></script>
+    <script src="pages/scripts/user_management.js"></script>
+    <!--Eventlistener Funktionieren nur direkt auf der HTML Seite programmiert-->
+    <script>
+        document.getElementById('username').addEventListener('keypress', function(event){
+            if(event.key === 'Enter'){
+                add_user();
+            }
+        });
+        document.getElementById('password').addEventListener('keypress', function(event){
+            if(event.key === 'Enter'){
+                add_user();
+            }
+        });
+        document.getElementById('password-confirm').addEventListener('keypress', function(event){
+            if(event.key === 'Enter'){
+                add_user();
+            }
+        });
+
+        document.getElementById('price-input').addEventListener('keypress', function(event){
+            if(event.key === 'Enter'){
+                savePrice();
+            }
+        });
+    </script>
+</body>
+</html>
